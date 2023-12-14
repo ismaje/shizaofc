@@ -147,7 +147,7 @@ ALTER TABLE `costumer`
 ALTER TABLE `detail_beli`
   ADD PRIMARY KEY (`id_detail_beli`),
   ADD KEY `id_beli` (`id_beli`),
-  ADD KEY `fk_tanaman_id` (`id_produk`);
+  ADD KEY `fk_produk_id` (`id_produk`);
 
 --
 -- Indeks untuk tabel `dibeli`
@@ -217,7 +217,7 @@ ALTER TABLE `produk`
 --
 ALTER TABLE `detail_beli`
   ADD CONSTRAINT `detail_beli_ibfk_1` FOREIGN KEY (`id_beli`) REFERENCES `dibeli` (`id_beli`),
-  ADD CONSTRAINT `fk_tanaman_id` FOREIGN KEY (`id_produk`) REFERENCES `produk` (`id_produk`);
+  ADD CONSTRAINT `fk_produk_id` FOREIGN KEY (`id_produk`) REFERENCES `produk` (`id_produk`);
 
 --
 -- Ketidakleluasaan untuk tabel `dibeli`
